@@ -8,7 +8,7 @@ class RingBuffer:
     # add to storage based on current (index)
     self.storage[self.current] = item
 
-    # check to see if the current is 
+    # check to see if the next index is less than the capacity - if true, increment index, otherwise return to 0
     if self.current + 1 < self.capacity:
       self.current += 1
     else:
